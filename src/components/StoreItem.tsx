@@ -26,7 +26,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 				<div className="mt-auto">
 					{quantity === 0 ? (
 						<Button className="w-100">+ add to cart</Button>
-					) : 
+					) : (
 						<div
 							className="d-flex align-items-center flex-column"
 							style={{ gap: ".5rem" }}
@@ -35,11 +35,15 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 								className="d-flex align-items-center justify-content-center"
 								style={{ gap: ".5rem" }}
 							>
-								Hi
+								<Button>-</Button>
+								<div>
+									<span className="fs-3">{quantity}</span> In cart
+								</div>
+								<Button>+</Button>
 							</div>
 							Bye
 						</div>
-					}
+					)}
 				</div>
 			</Card.Body>
 		</Card>
