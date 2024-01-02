@@ -37,11 +37,13 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 							>
 								<Button>-</Button>
 								<div>
-									<span className="fs-3">{quantity}</span> In cart
+									<span className="fs-3">{quantity}</span> in cart
 								</div>
 								<Button>+</Button>
 							</div>
-							Bye
+							<Button variant="danger" size="sm">
+								Remove
+							</Button>
 						</div>
 					)}
 				</div>
